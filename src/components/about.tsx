@@ -106,7 +106,7 @@ export function About() {
           </p>
         </motion.div>
 
-        <div className="flex flex-col lg:flex-row gap-12 items-start translate-x-[110px]  ">
+        <div className="flex flex-col lg:flex-row gap-12 items-start translate-x-[0px]  ">
           <motion.div
             className="lg:w-1/3 w-full"
             initial={{ opacity: 0, x: -30 }}
