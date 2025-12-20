@@ -75,6 +75,7 @@ export function Navbar() {
             onClick={toggleTheme}
             aria-label="Toggle theme"
             data-testid="button-theme-toggle"
+            className="cursor-pointer"
           >
             {theme === "dark" ? (
               <Sun className="w-5 h-5" />

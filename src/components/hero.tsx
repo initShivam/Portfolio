@@ -102,8 +102,9 @@ export function Hero() {
               <Button
                 size="lg"
                 onClick={handleDownloadResume}
-                className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white border-0 px-8"
+                className="cursor-pointer bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white border-0 px-8"
                 data-testid="button-download-resume"
+                
               >
                 <Download className="w-5 h-5 mr-2" />
                 Download Resume
@@ -113,6 +114,7 @@ export function Hero() {
                 variant="outline"
                 onClick={scrollToProjects}
                 data-testid="button-view-projects"
+                 className="cursor-pointer"
               >
                 View Projects
                 <ArrowDown className="w-5 h-5 ml-2" />
@@ -129,36 +131,36 @@ export function Hero() {
           >
             <div className="relative max-w-[280px] md:max-w-[320px] lg:max-w-[384px] group">
 
-              {/* glowing background */}
-              <div className="absolute inset-0 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500
-                              rounded-full blur-2xl opacity-30 dark:opacity-50
-                              transition-opacity duration-500 ease-out
-                              group-hover:opacity-70" />
+            {/* glowing background */}
+            <div className="absolute inset-0 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500
+                            rounded-full blur-2xl opacity-30 dark:opacity-50
+                            transition-opacity duration-500 ease-out
+                            group-hover:opacity-70" />
 
-              {/* gradient ring */}
-              <div className="relative w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80
-                              rounded-full p-1
-                              bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500
+            {/* gradient ring */}
+            <div className="relative w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80
+                            rounded-full p-1
+                            bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500
+                            overflow-visible">
+
+              {/* inner container */}
+              <div className="relative w-full h-full rounded-full bg-card
+                              flex items-center justify-center
                               overflow-visible">
 
-                {/* inner container */}
-                <div className="relative w-full h-full rounded-full bg-card
-                                flex items-center justify-center
-                                overflow-visible">
+                <img
+                  src="/profile.jpeg"
+                  alt="Shivam Singh"
+                  className="w-full h-full object-cover rounded-full
+                            transition-all duration-700 ease-out
+                            group-hover:scale-125
+                            group-hover:-translate-y-2
+                            group-hover:shadow-[0_25px_50px_rgba(0,0,0,0.45)]"
+                />
 
-                  <img
-                    src="/profile.jpeg"
-                    alt="Shivam Singh"
-                    className="w-full h-full object-cover rounded-full
-                              transition-all duration-700 ease-out
-                              group-hover:scale-125
-                              group-hover:-translate-y-2
-                              group-hover:shadow-[0_25px_50px_rgba(0,0,0,0.45)]"
-                  />
-
-                </div>
               </div>
             </div>
+          </div>
 
           </motion.div>
         </div>

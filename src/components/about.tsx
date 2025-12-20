@@ -99,7 +99,7 @@ export function About() {
               Me
             </span>
           </h2>
-          <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
+          <p className="text-muted-foreground text-center max-w-2x1 mx-auto mb-12 ">
             Aspiring Data Analyst with Diploma in Information Technology and
             hands-on experience in Python, SQL, Excel, and Power BI. Currently
             pursuing B.Tech in Computer Science and Engineering.
@@ -108,14 +108,14 @@ export function About() {
 
         <div className="flex flex-col lg:flex-row gap-12 items-start translate-x-[0px]  ">
           <motion.div
-            className="lg:w-1/3 w-full"
+            className="lg:w-1/3 w-full mt-15"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
             <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-50 transition-opacity duration-300" />
               <div className="relative aspect-square rounded-2xl overflow-hidden bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 p-1">
                 <div className="w-full h-full rounded-xl bg-card flex items-center justify-center">
                   <div className="text-7xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent">
@@ -133,6 +133,7 @@ export function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
+            
           >
             <div className="flex gap-4 mb-8">
               {tabs.map((tab) => (
@@ -141,8 +142,8 @@ export function About() {
                   onClick={() => setActiveTab(tab)}
                   className={`relative px-4 py-2 text-sm md:text-base font-medium transition-colors duration-200 ${
                     activeTab === tab
-                      ? "text-foreground"
-                      : "text-muted-foreground hover:text-foreground"
+                      ? "text-foreground cursor-pointer"
+                      : "text-muted-foreground hover:text-foreground cursor-pointer"
                   }`}
                   data-testid={`button-tab-${tab.toLowerCase()}`}
                 >
@@ -166,6 +167,7 @@ export function About() {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.3 }}
                 className="min-h-[300px]"
+                
               >
                 {activeTab === "Skills" && (
                   <div className="space-y-6" data-testid="content-skills">
@@ -196,7 +198,8 @@ export function About() {
                     {experienceData.map((exp, index) => (
                       <div
                         key={index}
-                        className="relative pl-6 border-l-2 border-pink-500/50"
+                        className="relative pl-6 border-l-2 border-pink-500/50 "
+                        
                       >
                         <div className="absolute left-[-5px] top-0 w-2 h-2 rounded-full bg-pink-500" />
                         <h4 className="text-lg font-semibold text-foreground">
