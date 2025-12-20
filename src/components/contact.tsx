@@ -27,6 +27,7 @@ import {
   SiTelegram,
   SiLinkedin,
   SiGithub,
+  SiX,
 } from "react-icons/si";
 
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
@@ -45,12 +46,12 @@ type ContactFormData = z.infer<typeof contactSchema>;
 /* -------------------- Social Links -------------------- */
 
 const socialLinks = [
-  {
-    name: "WhatsApp",
-    icon: SiWhatsapp,
-    href: "https://wa.me/918511500331",
-    color: "hover:text-green-500",
-  },
+  // {
+  //   name: "WhatsApp",
+  //   icon: SiWhatsapp,
+  //   href: "https://wa.me/910000000000",
+  //   color: "hover:text-green-500",
+  // },
   {
     name: "LinkedIn",
     icon: SiLinkedin,
@@ -69,12 +70,18 @@ const socialLinks = [
     href: "https://www.instagram.com/initshivam/",
     color: "hover:text-pink-500",
   },
+  // {
+  //   name: "Telegram",
+  //   icon: SiTelegram,
+  //   href: "https://t.me/Initshivam",
+  //   color: "hover:text-blue-400",
+  // },
   {
-    name: "Telegram",
-    icon: SiTelegram,
-    href: "https://t.me/Initshivam",
-    color: "hover:text-blue-400",
-  },
+    name: "X",
+    icon: SiX,
+    href: "https://x.com/_init_shivam_",
+    color: "hover:text-pink-500",
+  }
 ];
 
 /* -------------------- Component -------------------- */

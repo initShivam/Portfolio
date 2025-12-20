@@ -127,18 +127,39 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             data-testid="hero-profile-image"
           >
-            <div className="relative max-w-[280px] md:max-w-[320px] lg:max-w-[384px]">
-              <div className="absolute inset-0 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 rounded-full blur-2xl opacity-30 dark:opacity-50 animate-pulse" />
-              <div className="relative w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full p-1 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">
-                <div className="w-full h-full rounded-full bg-card flex items-center justify-center overflow-hidden">
-                  <div className="text-6xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent">
-                   
-                    <img src="/profile.jpeg" alt="Shivam Singh" className="w-full h-full object-cover rounded-full"/>
+            <div className="relative max-w-[280px] md:max-w-[320px] lg:max-w-[384px] group">
 
-                  </div>
+              {/* glowing background */}
+              <div className="absolute inset-0 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500
+                              rounded-full blur-2xl opacity-30 dark:opacity-50
+                              transition-opacity duration-500 ease-out
+                              group-hover:opacity-70" />
+
+              {/* gradient ring */}
+              <div className="relative w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80
+                              rounded-full p-1
+                              bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500
+                              overflow-visible">
+
+                {/* inner container */}
+                <div className="relative w-full h-full rounded-full bg-card
+                                flex items-center justify-center
+                                overflow-visible">
+
+                  <img
+                    src="/profile.jpeg"
+                    alt="Shivam Singh"
+                    className="w-full h-full object-cover rounded-full
+                              transition-all duration-700 ease-out
+                              group-hover:scale-125
+                              group-hover:-translate-y-2
+                              group-hover:shadow-[0_25px_50px_rgba(0,0,0,0.45)]"
+                  />
+
                 </div>
               </div>
             </div>
+
           </motion.div>
         </div>
       </div>
